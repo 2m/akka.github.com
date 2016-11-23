@@ -1,0 +1,15 @@
+machine:
+  ruby:
+    version: 2.3.1
+
+general:
+  artifacts:
+    - "_site" # relative to the build directory
+
+dependencies:
+  pre:
+    - gem install jekyll
+
+test:
+  override:
+    - jekyll build
